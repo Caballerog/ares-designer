@@ -1,0 +1,52 @@
+<aside id="aside" class="aside-off">
+  <figure class="sidebar-logotype"><a class="logotype-link" href="https://carloscaballero.io">carlos caballero</a>
+  </figure>
+
+  <figure class="profile" style="background-image: url({{asset "img/profile_image.jpg"}})"></figure>
+
+  <h1 class="motto">talking about computer science</h1>
+
+  <section class="social-media">
+    <a class="media-link" href="https://twitter.com/carlillo" target="_blank" title="Twitter"><i
+        class="fab fa-twitter"></i></a>
+    <a class="media-link" href="https://github.com/caballerog" target="_blank" title="Fork me on Github"><i
+        class="fab fa-github"></i></a>
+    <a class="media-link" href="https://www.linkedin.com/in/carlos-caballero-gonzalez" target="_blank"
+      title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a class="media-link" href="{{@blog.url}}/rss/" target="_blank" title="RSS Feed"><i class="fas fa-rss"></i></a>
+  </section>
+
+  {{!-- {{#get "posts" limit="5" as |recents|}}
+  <section class="recent-posts">
+    <article class="title">recent posts</article>
+    {{#foreach recents}}
+    <article class="post">
+      <a href="{{url}}" class="post-title">{{title}}</a>
+      <span class="post-readme-time">{{reading_time}}</span>
+    </article>
+    {{/foreach}}
+  </section>
+  {{/get}} --}}
+
+  {{#get "posts" filter="featured:true" as |series|}}
+  <section class="series-posts">
+    <article class="news-title">series posts</article>
+    {{#foreach series}}
+    <article class="news-link">
+      <a href="{{url}}" class="news-name">{{title}}</a>
+    </article>
+    {{/foreach}}
+  </section>
+  {{/get}}
+
+  {{!-- {{#get "tags" limit="all" include="count.posts" order="name asc"}}
+  <section class="categories">
+    <article class="title">categories</article>
+    {{#foreach tags}}
+    <article class="ctg">
+      <a href="{{url}}" class="post-title">{{name}}</a> <span class="ctg-count">{{count.posts}}</span>
+    </article>
+    {{/foreach}}
+  </section>
+  {{/get}} --}}
+</aside>

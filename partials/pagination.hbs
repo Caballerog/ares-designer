@@ -1,0 +1,17 @@
+<section class="pagination">
+    <article class="pagination-page-number">
+        <span>Page {{page}} of {{pages}}</span>
+    </article>
+
+    {{#if prev}}
+    <article class="pagination-page-button">
+        <a class="link" href="{{page_url prev}}"><span aria-hidden="true">&larr;</span> Newer Posts</a>
+    </article>
+    {{/if}}
+
+    {{#if next}}
+    <article class="pagination-page-button">
+        <a class="link" href="{{page_url next}}">Older Posts <span aria-hidden="true">&rarr;</span></a>
+    </article>
+    {{/if}}
+</section>

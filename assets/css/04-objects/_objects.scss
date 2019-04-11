@@ -1,0 +1,17 @@
+@mixin postTitle() {
+  .post-title {
+    font-size: 3em;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  .readme-time,
+  .point {
+    margin: 0;
+    color: $colorFontsMedium;
+  }
+
+  .point {
+    display: inline;
+    margin: 0.5rem;
+  }
+}

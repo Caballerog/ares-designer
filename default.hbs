@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{@blog.description}}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{{@blog.title}}</title>
+    {{ghost_head}}
+    <link rel="shortcut icon" href="{{asset "/img/logo.ico"}}">
+    <link rel="stylesheet" href="{{asset "/css/import.css"}}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+</head>
+
+<body>
+    {{>header}}
+
+    {{{body}}}
+
+    {{ghost_foot}}
+
+    {{>scripts}}
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <script src="{{asset "js/vendor/modernizr-2.8.0.min.js"}}"></script>
+    <script src="{{asset "js/localServices/hamburger.js"}}"></script>
+</body>
+
+</html>

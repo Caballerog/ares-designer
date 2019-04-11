@@ -1,0 +1,45 @@
+<section class="central-structure">
+  {{> sidebar}}
+
+  <main>
+    <section class="filter">
+      <article class="filter-wrapper">
+        {{#get "tags" limit="all" include="count.posts" order="name asc"}}
+        {{#foreach tags}}
+        <div class="filter-item"><a class="filter-glass" href="{{url}}"></a><span class="filter-image"
+            style="background-image: url({{feature_image}});"></span><span class="filter-name">{{name}}</span></div>
+        {{/foreach}}
+        {{/get}}
+      </article>
+    </section>
+
+    <section class="post-list">
+      {{#foreach posts}}
+      <article class="card">
+        {{#if feature_image}}
+        <figure class="card-banner" style="background-image: url({{feature_image}});"></figure>
+        {{else}}
+        <figure class="card-banner" style="background-image: url({{asset "/img/bg_default.jpg"}});"></figure>
+        {{/if}}
+        <div class="card-information">
+          <span class="card-readme-time">{{reading_time}}</span>
+          <span class="card-separate">/</span>
+          <span
+            class="card-date">{{date published_at format="DD"}}-{{date published_at format="MM"}}-{{date published_at format="YYYY"}}</span>
+          <span class="tags-list">
+            {{#foreach tags}}
+            <img class="tag" alt="{{name}}" src="{{feature_image}}">
+            {{/foreach}}
+          </span>
+        </div>
+        <div class="card-title">{{title}}</div>
+        <a class="card-glass" href="{{url}}" title="{{title}}"></a>
+      </article>
+      {{/foreach}}
+    </section>
+
+    {{pagination}}
+
+    {{> footer}}
+  </main>
+</section>

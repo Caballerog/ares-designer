@@ -1,0 +1,23 @@
+{
+  "name": "ares-designer",
+  "version": "0.1.0",
+  "description": "Ares designer is a elegant theme for GhostCMS",
+  "scripts": {
+    "prod": "sass assets/css/import.scss:assets/css/import.css --style compressed",
+    "dev": "sass --watch assets/css/import.scss:assets/css/import.css --style compressed",
+    "specificity-graph": "specificity-graph assets/css/import.css"
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.18.0",
+    "specificity-graph": "^0.1.7"
+  },
+  "config": {
+    "posts_per_page": 12
+  }
+}

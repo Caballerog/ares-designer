@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(../../font/Source_Sans_Pro/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Ailerons';
+    src: url(../../font/Ailerons-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Fira Mono';
+    src: url(../../font/Fira_Mono/FiraMono-Regular.ttf);
+}
+
+$colorPrimary: #ff9617;
+$colorSecondary: #4078c0;
+$colorFontsDark: #2c2c2c;
+$colorFontsMedium: rgba(38, 41, 58, .6);
+$colorFontsLight: #fafafa;
+$colorLight: #f6f9fa;
+$colorMedium: #201f2d;
+$colorDark: #26293a;
+$colorShadow: rgba(0, 0, 0, 0.4);
+$colorSeparateMedium: rgba(250, 250, 250, 0.6);
+$colorSeparateDark: rgba(0, 0, 0, 0.2);
+$colorListMedium: rgba(38, 41, 58, 0.04);
+
+$fontType: 'Source Sans Pro',
+sans-serif;
+$fontTypeTitle: 'Ailerons',
+sans-serif;
+$fontTypeCode: 'Fira Mono',
+monospace;
+
+$pcFormatBig: 1920px;
+$pcFormatStandard: 1770px;
+$pcFormatUltraHD: 1443px;
+$pcFormatHabitual: 1366px;
+$pcFormatHD: 1190px;
+$pcFormatSmall: 1135px;
+$mobileFormatBig: 860px;
+$mobileFormatStandard: 640px;

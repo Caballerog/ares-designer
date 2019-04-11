@@ -1,0 +1,341 @@
+body,
+html {
+  @include box-size();
+  @include flex(row, wrap, center, flex-start);
+  background-color: $colorDark;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+}
+
+header {
+  @include box-size(100%, 60px);
+  @include flex();
+  background-color: $colorDark;
+}
+
+hgroup {
+  @include box-size(0, 100%);
+  @include flex(row, nowrap, flex-start, center);
+}
+
+nav {
+  @include box-size(80%, 100%);
+  @include flex(row, nowrap, flex-end, center);
+}
+
+aside {
+  @include box-size(15%, 100%);
+  padding: 1rem;
+  background-color: $colorDark;
+}
+
+main {
+  @include box-size(85%, 100%);
+  @include flex(row, wrap, center, flex-start);
+  background-color: $colorLight;
+  border-radius: 50px 0px 0px 0px;
+  box-shadow: inset 10px 5px 30px -5px $colorShadow;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar-track {
+    background-color: $colorLight;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(
+      135deg,
+      $colorPrimary 5%,
+      $colorLight 100%
+    );
+  }
+}
+
+footer {
+  @include box-size(100%, 60px);
+  @include flex();
+  background-color: $colorDark;
+}
+
+@mixin elementsGenerics() {
+  h1,
+  h2 {
+    font-size: 2em;
+    color: $colorFontsDark;
+    text-align: left;
+    margin: 1rem 0 1rem 0;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    color: $colorFontsDark;
+    text-align: left;
+    margin: 1rem 0 1rem 0;
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    @include box-size(auto, 18px);
+    line-height: 18px;
+    color: $colorSecondary;
+    text-decoration: none;
+    text-shadow: none;
+    transition: color 0.4s ease;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      display: block;
+      @include box-size(100%, 20px);
+      max-width: 0;
+      border-bottom: 1px solid $colorPrimary;
+      overflow: hidden;
+      transition: max-width 0.4s ease;
+    }
+
+    &:hover {
+      color: $colorPrimary;
+
+      &::before {
+        max-width: 100%;
+      }
+    }
+  }
+
+  span {
+    margin: 1rem 0 1rem 0;
+  }
+
+  img {
+    max-width: 500px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.1em;
+    color: $colorFontsDark;
+    line-height: 1.8rem;
+    margin: 2rem 0 2rem 0;
+  }
+
+  figure {
+    @include box-size(100%, auto);
+    margin: 2rem 0 2rem 0;
+    text-align: center;
+
+    img {
+      max-width: 500px;
+    }
+
+    figcaption {
+      font-size: 1.1em;
+      color: $colorFontsMedium;
+      margin: 1rem 0 1rem 0;
+    }
+  }
+
+  hr {
+    border: solid 1px $colorSeparateDark;
+    margin: 2rem 0 2rem 0;
+  }
+
+  p code,
+  li code,
+  h2 code {
+    display: inline;
+    background-color: $colorSeparateDark;
+    font-family: monospace;
+    border-radius: 5px;
+    color: $colorSecondary;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    margin: 0 0.5rem 0 0.5rem;
+  }
+
+  code span {
+    font-family: $fontTypeCode;
+    padding: 0;
+    margin: 0;
+  }
+
+  code {
+    display: block;
+    @include box-size(100%, auto);
+    background-color: $colorMedium;
+    margin: 1rem 0 1rem 0;
+    font-family: $fontTypeCode;
+    border-radius: 5px;
+    color: $colorFontsLight;
+    font-size: 0.9em;
+    line-height: 1.4rem;
+    padding: 1rem 0 1rem 2rem;
+  }
+
+  i {
+    font-size: 1em;
+    color: $colorSecondary;
+
+    &:hover {
+      animation: rubberBand 1.2s;
+    }
+  }
+
+  blockquote {
+    @include box-size(100%, auto);
+    background-color: $colorListMedium;
+    border-left: solid 2px $colorSecondary;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 2rem 0 2rem 0;
+  }
+
+  ol {
+    @include box-size(100%, auto);
+    background-color: $colorListMedium;
+    border-radius: 5px;
+    padding: 1rem 1rem 1rem 2rem;
+    margin: 2rem 0 2rem 0;
+    overflow: hidden;
+
+    li {
+      position: relative;
+      font-size: 1em;
+      margin: 0.2rem 1rem 0.2rem 0;
+      color: $colorFontsDark;
+    }
+  }
+
+  ul {
+    @include box-size(100%, auto);
+    background-color: $colorListMedium;
+    border-radius: 5px;
+    padding: 1rem 1rem 1rem 3rem;
+    margin: 2rem 0 2rem 0;
+    list-style: none;
+    overflow: hidden;
+
+    li {
+      position: relative;
+      font-size: 1em;
+      margin: 0.2rem 1rem 0.2rem 0;
+      color: $colorFontsDark;
+    }
+  }
+
+  time {
+    margin: 0;
+    color: $colorFontsMedium;
+  }
+}
+
+@media only screen and (max-width: $pcFormatUltraHD) {
+  aside {
+    @include box-size(20%, auto);
+  }
+
+  main {
+    @include box-size(80%, 100%);
+  }
+}
+
+@media only screen and (max-width: $pcFormatHD) {
+  aside {
+    @include box-size(25%, auto);
+  }
+
+  main {
+    @include box-size(75%, 100%);
+  }
+}
+
+@media only screen and (max-width: $pcFormatSmall) {
+  hgroup {
+    width: 20%;
+  }
+
+  aside {
+    @include box-size(300px, auto);
+    position: absolute;
+    z-index: 2;
+    border-radius: 0 0 20px 0;
+    transition: left 0.8s ease;
+  }
+
+  main {
+    @include box-size(100%, 100%);
+  }
+
+  img {
+    max-width: 400px;
+  }
+
+  code {
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: $mobileFormatBig) {
+  footer {
+    height: 100px !important;
+    flex-flow: column nowrap !important;
+  }
+}
+
+@media only screen and (max-width: $mobileFormatStandard) {
+  html,
+  body {
+    height: auto;
+    overflow-y: initial;
+  }
+
+  hgroup {
+    @include box-size(10%, 100%);
+  }
+
+  nav {
+    @include box-size(90%, 100%);
+    @include flex(row, nowrap, center, center);
+  }
+
+  main {
+    box-shadow: none !important;
+    overflow: hidden;
+  }
+
+  h2 {
+    font-size: 1.5em;
+
+    code {
+      font-size: 1.5em;
+    }
+  }
+
+  figure img,
+  img {
+    max-width: 90%;
+  }
+
+  p {
+    overflow-x: scroll;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+
+  ul,
+  ol {
+    overflow-x: scroll;
+  }
+
+  code {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    overflow-x: scroll;
+    font-size: 0.8em;
+  }
+}

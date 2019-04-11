@@ -1,0 +1,741 @@
+.sidebar-logotype {
+  display: none;
+  @include box-size(100%, 80px);
+  margin-bottom: 3rem;
+  user-select: none;
+
+  .logotype-link {
+    @include box-size(100%, 100%);
+    display: block;
+    font-size: 2em;
+    text-align: center;
+    color: $colorFontsLight;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $fontTypeTitle, sans-serif;
+    transition: color 0.4s ease;
+
+    &:hover {
+      color: $colorPrimary;
+    }
+  }
+}
+
+.header-logotype {
+  @include box-size(auto, 60px);
+  transform: translate(-2vw, 0);
+  user-select: none;
+
+  .logotype-link {
+    @include box-size(100%, 100%);
+    display: block;
+    font-size: 1.5em;
+    line-height: 60px;
+    color: $colorFontsLight;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $fontTypeTitle, sans-serif;
+    transition: color 0.4s ease;
+
+    &:hover {
+      color: $colorPrimary;
+    }
+  }
+}
+
+.profile {
+  @include box-size(100px, 100px);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  text-align: center;
+  border-radius: 100%;
+  margin: 0 auto 1rem auto;
+}
+
+.motto {
+  @include box-size(100%, 20px);
+  color: $colorFontsLight;
+  text-align: center;
+  font-size: 0.7vw;
+  text-transform: uppercase;
+  opacity: 0.6s;
+  margin-bottom: 1rem;
+}
+
+.social-media {
+  @include box-size(100%, 30px);
+  @include flex(row, nowrap, space-evenly, center);
+  margin-bottom: 2rem;
+
+  .media-link {
+    text-decoration: none;
+    color: $colorFontsLight;
+    font-size: 1.2em;
+    transition: color 0.4s ease;
+
+    &:hover {
+      color: $colorPrimary;
+    }
+  }
+}
+
+.series-posts {
+  @include box-size(100%, auto);
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: $colorMedium;
+  overflow-y: scroll;
+  box-shadow: inset 0 0 30px -10px $colorShadow;
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $colorLight;
+    border-radius: 10px;
+  }
+
+  .news-title {
+    @include box-size(100%, 60px);
+    font-size: 1.2em;
+    color: $colorFontsLight;
+    text-transform: uppercase;
+  }
+
+  .news-link {
+    @include box-size(100%, auto);
+    @include flex(row, wrap, center, center);
+    border-bottom: solid 0.4px $colorSeparateMedium;
+    padding: 0.5em 0 0.5rem 0;
+
+    .news-name {
+      display: block;
+      @include box-size(100%, 50%);
+      font-size: 1em;
+      color: $colorFontsLight;
+      text-decoration: none;
+      transition: color 0.4s ease;
+
+      &:hover {
+        color: $colorPrimary;
+      }
+    }
+
+    /* .post-readme-time {
+				display: block;
+				@include box-size(100%, 50%);
+				font-size: 1em;
+				color: $colorSeparateMedium;
+			} */
+  }
+}
+
+/* .categories {
+	margin-bottom: 1rem;
+
+	.ctg {
+		@include box-size(100%, auto);
+		@include flex(row, nowrap, center, center);
+		border-bottom: solid 0.4px $colorSeparateMedium;
+		padding: 0.5em 0 0.5rem 0;
+
+		.post-title {
+			display: block;
+			@include box-size(95%, 50%);
+			font-size: 1em;
+			color: $colorFontsLight;
+			text-decoration: none;
+			transition: color 0.4s ease;
+
+			&:hover {
+				color: $colorPrimary;
+			}
+		}
+
+		.ctg-count {
+			display: block;
+			@include box-size(5%, 50%);
+			font-size: 1em;
+			color: $colorSeparateMedium;
+		}
+	}
+} */
+
+.menu {
+  @include box-size();
+  @include flex(row, nowrap, flex-end, center);
+  padding-right: 1rem;
+  list-style: none;
+  user-select: none;
+  overflow: hidden;
+
+  .menu-item-wrapper .menu-item {
+    text-decoration: none;
+    font-size: 0.9em;
+    color: $colorLight;
+    margin: 0 1rem;
+    text-transform: uppercase;
+    transition: color 0.4s ease;
+
+    &:hover {
+      color: $colorPrimary;
+    }
+  }
+}
+
+.card {
+  position: relative;
+  @include box-size(450px, 300px);
+  @include flex(row, wrap, center, center);
+  margin: 0 0 3rem 0;
+  border-radius: 5px;
+  background: #ffffff;
+  box-shadow: 0 0 10px -2px $colorShadow;
+  transition: box-shadow 0.4s ease;
+
+  .card-banner {
+    @include box-size(100%, 50%);
+    border-radius: 5px 5px 0px 0px;
+    clip-path: polygon(
+      70% 100%,
+      0 100%,
+      0 0,
+      100% 0,
+      100% 100%,
+      80% 100%,
+      75% 90%
+    );
+    box-shadow: inset 0 -10px 30px -15px $colorShadow;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    transition: all 0.4s ease;
+  }
+
+  .card-glass {
+    position: absolute;
+    display: block;
+    @include box-size();
+  }
+
+  .card-information {
+    @include box-size(100%, 20%);
+    @include flex(row, nowrap, flex-end, center);
+    padding-right: 2rem;
+
+    .card-readme-time,
+    .card-separate,
+    .card-date {
+      margin: 0 0.5rem;
+      font-size: 1em;
+      color: $colorFontsMedium;
+    }
+
+    .tags-list {
+      margin: 0 0.5rem;
+
+      .tag {
+        @include box-size(20px, 20px);
+      }
+    }
+  }
+
+  .card-title {
+    @include box-size(100%, 30%);
+    border-radius: 0px 0px 5px 5px;
+    padding: 0rem 2rem 1rem 2rem;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    color: $colorFontsDark;
+    transition: all 0.4s ease;
+    overflow: hidden;
+  }
+
+  &:hover {
+    box-shadow: 5px 5px 30px -5px $colorShadow;
+  }
+
+  &:hover .card-title {
+    color: $colorPrimary;
+  }
+}
+
+.pagination {
+  @include box-size(100%, 100px);
+  @include flex(row, wrap, center, center);
+  padding: 0 3.5rem 2rem 3.5rem;
+
+  .pagination-page-number {
+    @include box-size(100%, 40%);
+    text-align: center;
+    line-height: 24px;
+    font-size: 1.2em;
+    color: $colorFontsDark;
+    margin-bottom: 1rem;
+  }
+
+  .pagination-page-button {
+    @include box-size(100%, 60%);
+    text-align: center;
+
+    .link {
+      display: block;
+      @include box-size();
+      border: solid 1px $colorDark;
+      border-radius: 5px;
+      text-decoration: none;
+      line-height: 36px;
+      color: $colorDark;
+      transition: all 0.4s ease;
+
+      &:hover {
+        border: solid 1px $colorPrimary;
+        color: $colorPrimary;
+      }
+    }
+  }
+}
+
+.footer-user {
+  @include box-size(50%, 100%);
+  @include flex();
+
+  .copyright {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: $colorFontsLight;
+    opacity: 0.6;
+  }
+}
+
+.footer-ghost {
+  @include box-size(50%, 100%);
+  @include flex();
+
+  .information {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: $colorFontsLight;
+    opacity: 0.6;
+  }
+
+  .author {
+    color: $colorPrimary;
+  }
+}
+
+.share-container {
+  @include box-size(100%, auto);
+  border-top: solid 1px rgba(38, 41, 58, 0.1);
+  border-bottom: solid 1px rgba(38, 41, 58, 0.1);
+  margin: 3rem 0 2rem 0;
+
+  .share-description {
+    color: $colorFontsMedium;
+    margin: 0 0 1rem 0;
+  }
+
+  .social-media-wrapper {
+    @include box-size(100%, auto);
+    @include flex(row, wrap, flex-start, flex-start);
+    margin: 2rem 0 2rem 0;
+  }
+
+  .social-media {
+    display: block;
+    @include box-size(auto, 40px);
+    @include flex(row, nowrap, center, center);
+    text-decoration: none !important;
+    border-radius: 5px;
+    transform: translate(0);
+    text-decoration: none;
+    margin: 1rem;
+    transition: transform 1s ease;
+
+    &:before {
+      position: initial;
+      width: 0;
+    }
+
+    .share-icon {
+      display: block;
+      @include box-size(20%, 100%);
+      font-size: 1em;
+      text-align: center;
+      line-height: 40px;
+      margin: 0 0.5rem 0 1rem;
+      color: $colorFontsLight;
+    }
+
+    .share-name {
+      display: block;
+      @include box-size(80%, 100%);
+      font-size: 1em;
+      text-align: center;
+      line-height: 40px;
+      color: $colorFontsLight;
+      margin: 0 1rem 0 0.5rem;
+    }
+
+    &:nth-child(1) {
+      background-color: rgb(59, 89, 152);
+    }
+
+    &:nth-child(2) {
+      background-color: rgb(29, 161, 242);
+    }
+
+    &:nth-child(3) {
+      background-color: rgb(221, 76, 57);
+    }
+
+    &:nth-child(4) {
+      background-color: rgb(0, 119, 181);
+    }
+
+    &:hover {
+      transform: translate(0, -10px);
+    }
+  }
+}
+
+.read-next-wrapper {
+  @include box-size(100%, auto);
+
+  .read-next {
+    @include box-size();
+    @include flex();
+    margin: 3rem 0 3rem 0;
+
+    .prev-story {
+      border-radius: 30px 0 0 30px;
+    }
+
+    .next-story {
+      border-radius: 0 30px 30px 0;
+    }
+
+    .next-story,
+    .prev-story {
+      display: block;
+      @include box-size(50%, 250px);
+      @include flex(column, nowrap, center, center);
+      text-decoration: none;
+      background-color: $colorMedium;
+      transition: background-color 0.4s ease;
+
+      &:before {
+        position: initial;
+        width: 0;
+      }
+
+      .title {
+        display: block;
+        @include box-size(100%, 50%);
+        font-size: 1.8em;
+        line-height: 50px;
+        text-align: center;
+        margin: 0;
+        padding: 1rem;
+        color: $colorFontsLight;
+        transition: color 0.4s ease;
+      }
+
+      .description {
+        display: block;
+        @include box-size(100%, 50%);
+        font-size: 1em;
+        text-align: center;
+        padding: 1rem;
+        margin: 0;
+        color: $colorFontsLight;
+        transition: color 0.4s ease;
+      }
+
+      &:hover {
+        background-color: $colorLight;
+        border: solid 2px $colorSecondary;
+      }
+    }
+
+    .prev-story:nth-child(1),
+    .next-story:nth-child(1) {
+      border-right: solid 2px $colorSecondary;
+    }
+
+    .prev-story:hover .title,
+    .prev-story:hover .description,
+    .next-story:hover .title,
+    .next-story:hover .description {
+      color: $colorFontsDark;
+    }
+  }
+}
+
+.tag-title {
+  @include box-size(100%, 200px);
+  @include flex(column, nowrap, center, center);
+
+  .tag {
+    @include box-size(50px, 50px);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin: 0.5rem 0 0.5rem 0;
+  }
+
+  .tag-description {
+    margin: 0.5rem 0 0.5rem 0;
+    color: $colorFontsDark;
+    font-size: 2em;
+  }
+}
+
+.hamburger-button {
+  padding-left: 2rem;
+  display: none !important;
+  font-size: 0.9em;
+  color: $colorFontsLight;
+  transition: color 0.4s ease;
+
+  &:hover {
+    color: $colorPrimary;
+  }
+}
+
+.central-structure {
+  @include box-size(100%, calc(100% - 60px));
+  @include flex(row, nowrap, center, flex-start);
+}
+
+.filter {
+  @include box-size(100%, 150px);
+  @include flex();
+
+  .filter-wrapper {
+    @include box-size(60%, 100%);
+    @include flex();
+
+    .filter-item {
+      position: relative;
+      @include box-size(auto, 30px);
+      overflow: hidden;
+      margin: 0 0.5rem 0 0.5rem;
+      transition: all 0.4s ease;
+
+      .filter-image {
+        display: block;
+        @include box-size(100%, 30px);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px;
+        transition: all 0.4s ease;
+      }
+
+      .filter-name {
+        display: block;
+        @include box-size(auto, 30px);
+        color: $colorFontsDark;
+        font-size: 1em;
+        line-height: 30px;
+        transition: all 0.4s ease;
+      }
+
+      .filter-glass {
+        position: absolute;
+        display: block;
+        top: 0;
+        @include box-size(100%, 30px);
+
+        &:hover + .filter-image {
+          margin-top: -30px;
+        }
+      }
+    }
+  }
+}
+
+.post-list {
+  @include box-size(100%, auto);
+  @include flex(row, wrap, space-around, flex-start);
+  padding: 1rem 3.5rem 2rem 3.5rem;
+  border-radius: 0px 0px 0px 50px;
+}
+
+.post-wrapper {
+  width: 100%;
+  margin: 0 4rem 0 4rem;
+
+  .title-wrapper {
+    @include box-size(100%, auto);
+    margin: 1rem 0 2rem 0;
+
+    .post-tag {
+      display: inline-block;
+      @include box-size(24px, 24px);
+      margin: 0 0.2rem 0 0.2rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    @include postTitle();
+  }
+
+  @include elementsGenerics();
+}
+
+@media only screen and (max-width: $pcFormatStandard) {
+  .card {
+    width: 350px;
+    margin: 0 0.5rem 3rem 0.5rem;
+  }
+}
+
+@media only screen and (max-width: $pcFormatUltraHD) {
+  .header-logotype {
+    transform: translate(1vw, 0);
+  }
+
+  .card {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: $pcFormatHabitual) {
+  .logotype-link {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: $pcFormatHD) {
+  .card {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: $pcFormatSmall) {
+  .header-logotype {
+    display: none;
+  }
+
+  .sidebar-logotype {
+    display: block;
+  }
+
+  .post-wrapper {
+    padding: 0 2rem 0 2rem;
+  }
+
+  .hamburger-button {
+    display: inline-block !important;
+  }
+
+  .card {
+    width: 350px;
+  }
+
+  .motto {
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width: $mobileFormatBig) {
+  .card {
+    width: 400px;
+    margin: 0 0 3rem 0;
+  }
+
+  .footer-user {
+    @include box-size();
+  }
+
+  .footer-ghost {
+    @include box-size(80%, 100%);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .read-next {
+    flex-flow: column nowrap !important;
+
+    .title {
+      font-size: 1.2em !important;
+    }
+
+    .description {
+      overflow-x: hidden !important;
+    }
+
+    .prev-story {
+      width: 100% !important;
+      border-radius: 5px 5px 0 0 !important;
+      height: 210px !important;
+      overflow-x: hidden;
+      border-right: solid 0px;
+      border-bottom: solid 2px $colorSecondary;
+    }
+
+    .next-story {
+      width: 100% !important;
+      border-radius: 0 0 5px 5px !important;
+      height: 210px;
+      overflow-x: hidden;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobileFormatStandard) {
+  .filter-wrapper {
+    width: 85%;
+  }
+
+  .filter-item {
+    margin: 0 1rem 0 1rem;
+  }
+
+  .filter-item:hover + .filter-image {
+    margin: 0;
+  }
+
+  .tags-list {
+    margin: 0 0 0 0.3rem;
+  }
+
+  .card-readme-time,
+  .card-separate,
+  .card-date {
+    margin: 0 0.1rem;
+    font-size: 0.8em;
+  }
+
+  .post-tag {
+    font-size: 2.5em;
+  }
+
+  .hamburger-button {
+    font-size: 0.7em;
+  }
+
+  .menu {
+    @include box-size();
+    @include flex(row, nowrap, center, center);
+    padding-right: 0;
+
+    .menu-item-wrapper .menu-item {
+      font-size: 0.7em;
+      margin: 0 0.5rem;
+    }
+  }
+
+  .card-banner {
+    box-shadow: inset 0 -10px 30px -20px $colorShadow;
+  }
+}
