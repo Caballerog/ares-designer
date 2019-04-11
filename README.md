@@ -2,7 +2,7 @@
 
 Minimalist and Elegant theme for Ghost. Demo @ https://carloscaballero.io
 
-[<img src="http://i.imgur.com/LCSB4Ca.jpg">](https://carloscaballero.io)
+[<img src="https://i.postimg.cc/fWY2QX89/ghost.png">](https://carloscaballero.io)
 
 - [Ares Designer](#ares-designer)
   - [Introduction](#introduction)
@@ -146,8 +146,8 @@ $mobileFormatStandard: 640px;
 
 ## Screenshots
 
-<a target="blank" href="https://carloscaballero.io"><img src="https://i.postimg.cc/fWY2QX89/ghost.png"></a>
-<a target="blank" href="https://carloscaballero.io"><img src="https://i.postimg.cc/NG6fZJmv/mobile01.jpg"></a>
+[<img src="https://i.postimg.cc/fWY2QX89/ghost.png">](https://carloscaballero.io)
+[<img src="https://i.postimg.cc/NG6fZJmv/mobile01.jpg">](https://carloscaballero.io)
 
 ## Roadmap
 
