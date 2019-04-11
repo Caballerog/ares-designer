@@ -11,6 +11,11 @@ Minimalist and Elegant theme for Ghost. Demo @ https://carloscaballero.io
   - [Installation](#installation)
   - [Setup](#setup)
   - [Development and Customization](#development-and-customization)
+  - [Screenshots](#screenshots)
+  - [Roadmap](#roadmap)
+  - [Are you using **Ares Designer**?](#are-you-using-ares-designer)
+  - [Related](#related)
+  - [License](#license)
 
 ---
 
@@ -142,8 +147,6 @@ $mobileFormatBig: 860px;
 $mobileFormatStandard: 640px;
 ```
 
-```
-
 ## Screenshots
 
 [<img src="https://i.postimg.cc/fWY2QX89/ghost.png">](https://carloscaballero.io)
@@ -161,13 +164,13 @@ If you're using **Ares Designer** on a live site, I'd love if you'd send me a me
 
 ## Related
 
-* [ITCSS architecture](https://carloscaballero.io/understanding-itcss-real-case-using-itcss-https-carloscaballero-io)
-* [ITCSS: Scalable and maintainable CSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/).
-* [How to Organize your Styles with ITCSS](https://blog.codeminer42.com/how-to-organize-your-styles-with-itcss-3787cbc6dcbf).
-* [Manage large CSS projects with ITCSS](https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528).
-* [CSS at trivago — Part 1: Structure and ITCSS](https://medium.com/@pistenprinz/css-at-trivago-part-1-structure-and-itcss-52f63ed557ca).
-* [Intro to ITCSS for Web Developers](https://www.hongkiat.com/blog/inverted-triangle-css-web-development/).
+- [ITCSS architecture](https://carloscaballero.io/understanding-itcss-real-case-using-itcss-https-carloscaballero-io)
+- [ITCSS: Scalable and maintainable CSS Architecture](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/).
+- [How to Organize your Styles with ITCSS](https://blog.codeminer42.com/how-to-organize-your-styles-with-itcss-3787cbc6dcbf).
+- [Manage large CSS projects with ITCSS](https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528).
+- [CSS at trivago — Part 1: Structure and ITCSS](https://medium.com/@pistenprinz/css-at-trivago-part-1-structure-and-itcss-52f63ed557ca).
+- [Intro to ITCSS for Web Developers](https://www.hongkiat.com/blog/inverted-triangle-css-web-development/).
+
 ## License
 
 MIT © [Carlos Caballero](carloscaballero.io)
-```
