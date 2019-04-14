@@ -7,7 +7,7 @@ Minimalist and Elegant theme for Ghost. Demo @ https://carloscaballero.io
 - [Ares Designer](#ares-designer)
   - [Introduction](#introduction)
   - [Authors](#authors)
-    - [Features](#features)
+  - [Features](#features)
   - [Installation](#installation)
   - [Setup](#setup)
   - [Development and Customization](#development-and-customization)
