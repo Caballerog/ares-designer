@@ -66,6 +66,9 @@ disqus_shortname: Your Disqus unique identifier
 Instead, you need to paste one into the `Blog Header` in the `Code injection` of your Ghost installation:
 
 ```html
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-UID"></script>
 <script>
