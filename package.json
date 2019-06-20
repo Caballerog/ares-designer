@@ -2,6 +2,9 @@
   "name": "ares-designer",
   "version": "0.1.0",
   "description": "Ares designer is a elegant theme for GhostCMS",
+  "engines": {
+    "ghost-api": "v2"
+  },
   "scripts": {
     "prod": "sass assets/css/import.scss:assets/css/import.css --style compressed",
     "dev": "sass --watch assets/css/import.scss:assets/css/import.css --style compressed",

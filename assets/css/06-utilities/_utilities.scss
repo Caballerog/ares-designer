@@ -5,6 +5,31 @@
 .aside-on {
   left: 0;
 }
+ol.tick-style-list,
+ul.tick-style-list {
+  li {
+    background-image: url(/assets/img//check-solid.svg);
+    background-position: 0px 0px;
+    background-size: 17px;
+  }
+}
+
+ol.warn-style-list,
+ul.warn-style-list {
+  li {
+    background-image: url(/assets/img/exclamation-triangle-solid.svg);
+    background-position: 0px 0px;
+    background-size: 17px;
+  }
+}
+ol.jedi-style-list,
+ul.jedi-style-list {
+  li {
+    background-image: url(/assets/img/jedi-order-brands.svg);
+    background-position: 0px -2px;
+    background-size: 17px;
+  }
+}
 
 @keyframes rubberBand {
   from {

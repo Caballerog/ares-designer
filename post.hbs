@@ -12,8 +12,8 @@
 	{{ghost_head}}
 	<link rel="shortcut icon" href="{{asset "/img/logo.ico"}}">
 	<link rel="stylesheet" href="{{asset "/css/import.css"}}">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
 </head>
 
@@ -28,8 +28,9 @@
 				<article class="filter-wrapper">
 					{{#get "tags" limit="all" include="count.posts" order="name asc"}}
 					{{#foreach tags}}
-					<div class="filter-item"><a class="filter-glass" href="{{url}}"></a><span class="filter-image" style="background-image: url({{feature_image}});"></span><span
-						 class="filter-name">{{name}}</span></div>
+					<div class="filter-item"><a class="filter-glass" href="{{url}}"></a><span class="filter-image"
+							style="background-image: url({{feature_image}});"></span><span
+							class="filter-name">{{name}}</span></div>
 					{{/foreach}}
 					{{/get}}
 				</article>
@@ -56,20 +57,26 @@
 				<article class="share-container">
 					<h2>Share On</h2>
 					<span class="share-description">
-						These blogs, resources and demonstrations are of great relevance now, I would love it if I had a moment to
+						These blogs, resources and demonstrations are of great relevance now, I would love it if I had a
+						moment to
 						share them!
 					</span>
 					<div class="social-media-wrapper">
-						<a class="social-media" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"
-						 title="Share on Facebook"><i class="fab fa-facebook-f share-icon"></i><span class="share-name">Facebook</span></a>
-						<a class="social-media" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-						 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter"><i
-							 class="fab fa-twitter share-icon"></i><span class="share-name">Twitter</span></a>
-						<a class="social-media" href="https://plus.google.com/share?url={{url absolute="true"}}" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"
-						 title="Share on Google+"><i class="fab fa-google-plus-g share-icon"></i><span class="share-name">Google+</span></a>
-						<a class="social-media" href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&title={{encode title}}"
-						 onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title="Share on Linkedin"><i
-							 class="fab fa-linkedin-in share-icon"></i><span class="share-name">Linkedin</span></a>
+						<a class="social-media"
+							href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+							onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"
+							title="Share on Facebook"><i class="fab fa-facebook-f share-icon"></i><span
+								class="share-name">Facebook</span></a>
+						<a class="social-media"
+							href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+							onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"
+							title="Share on Twitter"><i class="fab fa-twitter share-icon"></i><span
+								class="share-name">Twitter</span></a>
+						<a class="social-media"
+							href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&title={{encode title}}"
+							onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;"
+							title="Share on Linkedin"><i class="fab fa-linkedin-in share-icon"></i><span
+								class="share-name">Linkedin</span></a>
 					</div>
 				</article>
 
