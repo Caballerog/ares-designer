@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.18.0",
+    "sass": "^1.57.1",
     "specificity-graph": "^0.1.7"
   },
   "config": {
